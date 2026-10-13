@@ -66,8 +66,22 @@ class Program
         Console.Write("Введите имя клиента: ");
         string customerName = Console.ReadLine() ?? "";
 
+        if (string.IsNullOrWhiteSpace(customerName))
+        {
+            Console.WriteLine("Имя клиента не может быть пустым.");
+            Pause();
+            return;
+        }
+
         Console.Write("Введите название товара: ");
         string productName = Console.ReadLine() ?? "";
+
+        if (string.IsNullOrWhiteSpace(productName))
+        {
+            Console.WriteLine("Название товара не может быть пустым.");
+            Pause();
+            return;
+        }
 
         Console.Write("Введите количество товара: ");
 
