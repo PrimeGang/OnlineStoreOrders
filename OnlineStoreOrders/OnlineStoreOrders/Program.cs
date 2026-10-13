@@ -148,6 +148,8 @@ class Program
         }
 
         Console.WriteLine();
+        Console.WriteLine();
+        Console.WriteLine($"Текущий статус заказа №{order.Id}: {order.Status}");
         Console.WriteLine("Выберите новый статус:");
         Console.WriteLine("1. Подтвержден");
         Console.WriteLine("2. Передан на склад");
@@ -183,6 +185,7 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine($"Статус заказа №{order.Id} изменен на: {order.Status}");
+
         Pause();
     }
 
