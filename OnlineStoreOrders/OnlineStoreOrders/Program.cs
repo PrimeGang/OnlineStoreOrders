@@ -106,12 +106,17 @@ class Program
             return;
         }
 
+        Console.WriteLine($"Всего заказов: {orders.Count}");
+        Console.WriteLine();
+
         foreach (Order order in orders)
         {
-            Console.WriteLine(
-                $"Заказ №{order.Id} | Клиент: {order.CustomerName} | " +
-                $"Товар: {order.ProductName} | Количество: {order.Quantity} | " +
-                $"Статус: {order.Status}");
+            Console.WriteLine($"Заказ №{order.Id}");
+            Console.WriteLine($"Клиент: {order.CustomerName}");
+            Console.WriteLine($"Товар: {order.ProductName}");
+            Console.WriteLine($"Количество: {order.Quantity}");
+            Console.WriteLine($"Статус: {order.Status}");
+            Console.WriteLine("--------------------------------------");
         }
 
         Pause();
